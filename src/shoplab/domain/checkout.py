@@ -1,7 +1,6 @@
 from shoplab.domain.models import Order
-from shoplab.infrastructure.console_notifier import ConsoleNotifier
+from shoplab.domain.notification_bridge import send_via_bridge
 
 
 def send_special_confirmation(order: Order) -> None:
-    notifier = ConsoleNotifier()
-    notifier.send(order, f"Special handling for {order.order_id}")
+    send_via_bridge(order, f"Special handling for {order.order_id}")
