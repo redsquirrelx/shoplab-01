@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from shoplab.domain.models import Order
 from shoplab.domain.pricing import order_total
-from shoplab.inventory import _store
+from ..inventory import _store
 
 
 @dataclass(frozen=True)
