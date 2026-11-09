@@ -1,5 +1,5 @@
 from shoplab.billing import charge
-from shoplab.domain.checkout import send_special_confirmation
+from shoplab.domain.checkout_v2 import send_special_confirmation
 from shoplab.domain.models import Order
 from shoplab.domain.notifications import send_confirmation
 from shoplab.infrastructure.console_notifier import ConsoleNotifier
