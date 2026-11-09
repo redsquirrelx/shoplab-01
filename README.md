@@ -1,6 +1,6 @@
 # ShopLab — Architectural boundary test repository
 
-A minimal, runnable Python e-commerce backend for testing static architectural-boundary investigation. No external runtime dependencies or database are needed.
+A minimal, runnable and documented Python e-commerce backend for testing static architectural-boundary investigation. No external runtime dependencies or database are needed.
 
 ## Run
 

@@ -15,6 +15,7 @@ class TestShop(unittest.TestCase):
         self.assertTrue(ok)
         self.assertEqual(total, 30)
         self.assertEqual(available_stock("BOOK"), 8)
+        self.assertEqual(total, 2 * 15)
 
     def test_disallowed_order(self):
         ok, remaining = process_order(Order("ORD-002", "BLOCKED", 1, 15))
