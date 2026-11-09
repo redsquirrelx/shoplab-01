@@ -2,7 +2,7 @@ import unittest
 from shoplab.application.checkout import process_order
 from shoplab.domain.models import Order
 from shoplab.inventory import available_stock
-from shoplab.inventory._store import STOCK
+from shoplab.inventory.stock_engine import STOCK
 
 
 class TestShop(unittest.TestCase):

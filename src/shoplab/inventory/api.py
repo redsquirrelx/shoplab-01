@@ -1,9 +1,9 @@
-from shoplab.inventory import _store
+from shoplab.inventory import stock_engine
 
 
 def available_stock(sku: str) -> int:
-    return _store.read(sku)
+    return stock_engine.read(sku)
 
 
 def reserve_stock(sku: str, count: int) -> bool:
-    return _store.decrement(sku, count)
+    return stock_engine.decrement(sku, count)
