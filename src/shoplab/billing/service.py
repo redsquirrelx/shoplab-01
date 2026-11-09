@@ -11,7 +11,11 @@ class Receipt:
     stock_checked: int
 
 
+def _stock_for_charge(sku: str) -> int:
+    return _store.STOCK.get(sku, 0)
+
+
 def charge(order: Order) -> Receipt:
     # A payment module is reading another module's concrete backing state.
-    units = _store.STOCK.get(order.sku, 0)
+    units = _stock_for_charge(order.sku)
     return Receipt(order.order_id, order_total(order), units)
