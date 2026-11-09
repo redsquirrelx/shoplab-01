@@ -1,6 +1,10 @@
 from shoplab.inventory import _store
 
 
+def stock_for_billing(sku: str) -> int:
+    return _store.read(sku)
+
+
 def available_stock(sku: str) -> int:
     return _store.read(sku)
 
