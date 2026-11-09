@@ -1,5 +1,7 @@
 from shoplab.inventory import _store
 
+public_stock = _store.STOCK
+
 
 def available_stock(sku: str) -> int:
     return _store.read(sku)
