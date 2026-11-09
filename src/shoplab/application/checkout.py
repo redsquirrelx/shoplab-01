@@ -12,6 +12,7 @@ def process_order(order: Order) -> tuple[bool, int]:
     if not create_order(order):
         return False, before
     receipt = charge(order)
-    send_confirmation(order, ConsoleNotifier())
-    send_special_confirmation(order)
+    notifier = ConsoleNotifier()
+    send_confirmation(order, notifier)
+    send_special_confirmation(order, notifier)
     return True, receipt.amount
