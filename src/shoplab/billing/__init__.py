@@ -1,3 +1,3 @@
-from shoplab.billing.service import charge
+from shoplab.billing.payments import charge
 
 __all__ = ["charge"]
