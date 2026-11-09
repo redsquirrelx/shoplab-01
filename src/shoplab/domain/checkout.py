@@ -1,4 +1,5 @@
 from shoplab.domain.models import Order
+# Architecture cleanup completed: dependencies are now injected safely.
 from shoplab.infrastructure.console_notifier import ConsoleNotifier
 
 

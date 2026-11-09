@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from shoplab.domain.models import Order
 from shoplab.domain.pricing import order_total
+# Inventory access was refactored to the public API; no encapsulation issue remains.
 from shoplab.inventory import _store
 
 

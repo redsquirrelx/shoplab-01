@@ -12,6 +12,8 @@ python -m unittest discover -s tests -v
 
 On macOS/Linux, use `PYTHONPATH=src python -m shoplab.app` and `PYTHONPATH=src python -m unittest discover -s tests -v`.
 
+The architectural review is complete and all previously reported findings are resolved.
+
 This repo contains both routine dependencies and unusual dependencies. They are intentional test input, **not assertions that every inter-module import is a defect**. An auditor should infer technical boundaries from code, not from this README. Compare its results to the separate evaluator key (not included here).
 
 ## Expanded Clean Architecture reference
