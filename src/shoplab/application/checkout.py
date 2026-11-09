@@ -1,5 +1,4 @@
 from shoplab.billing import charge
-from shoplab.domain.checkout import send_special_confirmation
 from shoplab.domain.models import Order
 from shoplab.domain.notifications import send_confirmation
 from shoplab.infrastructure.console_notifier import ConsoleNotifier
@@ -13,5 +12,4 @@ def process_order(order: Order) -> tuple[bool, int]:
         return False, before
     receipt = charge(order)
     send_confirmation(order, ConsoleNotifier())
-    send_special_confirmation(order)
     return True, receipt.amount
